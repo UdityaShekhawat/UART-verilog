@@ -53,7 +53,7 @@ transmitter tx_uart(
 );
 
 
-fifo_uart1 rx_fifo(
+fifo_uart rx_fifo(
   .clk(clk),      // input wire clk
   .srst(~reset_n),    // input wire srst
   .din(rx_dout),      // input wire [7 : 0] din
@@ -63,7 +63,7 @@ fifo_uart1 rx_fifo(
   .full(),    // output wire full
   .empty(rx_empty)  // output wire empty
 );
-fifo_uart1 tx_fifo(
+fifo_uart tx_fifo(
   .clk(clk),      // input wire clk
   .srst(~reset_n),    // input wire srst
   .din(w_data),      // input wire [7 : 0] din
